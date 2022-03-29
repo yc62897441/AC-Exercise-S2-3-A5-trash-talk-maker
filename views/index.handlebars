@@ -1,0 +1,48 @@
+<form method="post" action="/">
+
+  <fieldset class="form-group row" id="occupations" name="occupations">
+    <div class="col-3">
+      <div class="img_container">
+        <img src="/images/engineer.jpg" alt="" class="card-img-top">
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" name="occupations" type="radio" id="engineer" value="engineer" {{#if
+          engineer}}checked{{/if}}>
+        <label class="form-check-label" for="engineer">
+          工程師
+        </label>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="img_container">
+        <img src="/images/designer.jpg" alt="" class="card-img-top">
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" name="occupations" type="radio" id="designer" value="designer" {{#if
+          designer}}checked{{/if}}>
+        <label class="form-check-label" for="designer">
+          設計師
+        </label>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="img_container">
+        <img src="/images/entrepreneur.jpg" alt="" class="card-img-top">
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" name="occupations" type="radio" id="entrepreneur" value="entrepreneur" {{#if
+          entrepreneur}}checked{{/if}}>
+        <label class="form-check-label" for="entrepreneur">
+          企業家
+        </label>
+      </div>
+    </div>
+  </fieldset>
+
+  <div>
+    <button type="submit" class="btn btn-success">Generate Password</button>
+    <div class="alert alert-info" role="alert">
+      <span class="mr-2">Trash Talk:</span> <code>{{#if trashTalk}}{{trashTalk}}{{/if}}</code>
+    </div>
+  </div>
+</form>
